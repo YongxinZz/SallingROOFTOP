@@ -4,9 +4,13 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable-anydpi/User.xml" value="0.1635" />
+        <entry key="app/src/main/res/layout/activity_about_us.xml" value="0.2662330295728601" />
+        <entry key="app/src/main/res/layout/activity_create_profile.xml" value="0.3963836669921875" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.27802429199218764" />
-        <entry key="app/src/main/res/layout/activity_show_menu.xml" value="0.3210309457087862" />
+        <entry key="app/src/main/res/layout/activity_show_menu.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_user_profile.xml" value="0.34268491024183545" />
         <entry key="app/src/main/res/layout/drink_row.xml" value="0.30871099941972374" />
+        <entry key="app/src/main/res/layout/fragment_bfriend.xml" value="0.4064516129032258" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.147" />
       </map>
     </option>

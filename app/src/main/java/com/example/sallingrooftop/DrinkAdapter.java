@@ -13,21 +13,30 @@ import java.util.List;
 
 public class DrinkAdapter extends RecyclerView.Adapter<DrinkAdapter.ViewHolder> {
     private List<Drink> sallingDrinks;
-
-    public final TextView name;
-    public final TextView description;
-    public final TextView price;
-    public final ImageView picture;
-
     public DrinkAdapter(List<Drink> sallingDrinks) {
         this.sallingDrinks = sallingDrinks;
+    }
+
+    public class ViewHolder extends RecyclerView.ViewHolder {
+        // each data item is just a string in this case
+        public final TextView name;
+        public final TextView description;
+        public final TextView price;
+        public final ImageView picture;
+
+        public ViewHolder(final View itemView) {
+            super(itemView);
+            name = (TextView) itemView.findViewById(R.id.drink_name);
+            description = (TextView) itemView.findViewById(R.id.drink_description);
+            price = (TextView) itemView.findViewById(R.id.drink_price);
+            picture = (ImageView) itemView.findViewById(R.id.drink_picture);
+        }
     }
 
     @Override
     public DrinkAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = (View) LayoutInflater.from(parent.getContext()).inflate(R.layout.drink_row, parent, false);
-        ViewHolder vh = new ViewHolder(v);
-        return vh;
+        return new ViewHolder(v);
     }
 
     @Override
@@ -37,7 +46,7 @@ public class DrinkAdapter extends RecyclerView.Adapter<DrinkAdapter.ViewHolder> 
         holder.name.setText(drink.getName());
         holder.description.setText(drink.getDescription());
         holder.price.setText(drink.getPrice());
-        holder.picture.
+        holder.picture.setImageResource(drink.getPicture());
     }
 
     @Override
@@ -47,4 +56,9 @@ public class DrinkAdapter extends RecyclerView.Adapter<DrinkAdapter.ViewHolder> 
 
 
 
+    public void setDrinks(List<Drink> drinks){
+        sallingDrinks = drinks;
+        notifyDataSetChanged();
+    }
 }
+

@@ -43,6 +43,7 @@
         android:id="@+id/menu2"
         style="@style/ButtonStyle"
         android:layout_marginTop="52dp"
+        android:onClick="toAboutUs"
         android:text="About us"
         app:layout_constraintEnd_toStartOf="@+id/location"
         app:layout_constraintHorizontal_bias="0.496"

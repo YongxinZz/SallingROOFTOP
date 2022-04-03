@@ -32,5 +32,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void toUserProfile(View view) {
+        Intent intent = new Intent(this, UserProfile.class);
+        startActivity(intent);
+    }
+
+    public void toAboutUs(View view) {
+        Intent intent = new Intent(this, AboutUs.class);
+        startActivity(intent);
     }
 }

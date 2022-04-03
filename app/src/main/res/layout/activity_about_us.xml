@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ShowMenu">
+    tools:context=".AboutUs">
 
     <View
         android:id="@+id/rectangle_at_the_top"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_width="443dp"
+        android:layout_height="85dp"
         android:layout_alignParentTop="true"
         android:background="@color/sallingBeige"
         android:visibility="visible"
@@ -29,10 +29,24 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/images" />
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="About Salling ROOFTOP"
+        android:textColor="@color/sallingRed"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle_at_the_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <ImageView
         android:id="@+id/picture"
         android:layout_width="412dp"
         android:layout_height="237dp"
+        android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,25 +54,13 @@
         app:srcCompat="@drawable/bmayvmggr_uhhkob3dfizyqo__y" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ROOFTOP Menu"
-        android:textColor="@color/sallingRed"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/picture"
+        android:layout_marginTop="80dp"
+        android:text="Shake to see the next image"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.65" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/drinkList"
-        android:layout_width="348dp"
-        android:layout_height="373dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/picture" />
 
